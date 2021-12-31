@@ -69,7 +69,7 @@ jobs:
       #     NPM_AUTH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
 
       # Release stable package version
-      - name: version
+      - name: release
         if: ${{ github.ref == 'refs/heads/main' }}
         run: yarn lerna version --conventional-commits
         env:
