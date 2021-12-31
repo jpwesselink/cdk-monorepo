@@ -1,0 +1,33 @@
+{
+    "compileOnSave": false,
+    "compilerOptions": {
+        "baseUrl": "./",
+        "outDir": "./lib",
+        "module": "commonjs",
+        "moduleResolution": "node",
+        "esModuleInterop": true,
+        "target": "es2017",
+        "typeRoots": ["node_modules/@types"],
+        "lib": ["es2015", "esnext", "dom"],
+        "paths": {},
+        "newLine": "LF",
+        "sourceMap": true,
+        "declaration": true,
+        "removeComments": true,
+        "noLib": false,
+        "emitDecoratorMetadata": true,
+        "experimentalDecorators": true,
+        "forceConsistentCasingInFileNames": true,
+        "noImplicitAny": true,
+        "noImplicitReturns": true,
+        "noUnusedLocals": true,
+        "noUnusedParameters": true,
+        "strictNullChecks": true,
+        "allowJs": true,
+        "checkJs": false,
+        "incremental": true,
+        "strict": true
+    },
+    "include": ["src/**/*", "**/*.d.ts", "**/*.spec.ts", "*.ts", "**/*.ts", ".eslintrc.js", "**/.eslintrc.js", "*.js", "**/*.js"],
+    "exclude": ["node_modules"]
+}
