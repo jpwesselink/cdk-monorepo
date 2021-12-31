@@ -1,7 +1,7 @@
 {
     "name": "@ephemeral/docs",
     "private": true,
-    "version": "1.2.3",
+    "version": "1.2.4",
     "description": "",
     "main": "./dist/index.js",
     "types": "./dist/index.d.ts",
@@ -25,7 +25,7 @@
     "author": "",
     "license": "MIT",
     "dependencies": {
-        "@ephemeral/utils": "^1.0.6"
+        "@ephemeral/utils": "^1.0.7"
     },
     "devDependencies": {
         "@types/node": "^14.14.19",
