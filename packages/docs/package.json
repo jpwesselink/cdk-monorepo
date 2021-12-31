@@ -19,8 +19,8 @@
         }
     },
     "scripts": {
-        "build": "tsup --dts --format cjs,esm --legacy-output && markdown-inject './README.md' ",
-        "deploy": "node dist/index.js"
+        "build": "tsup --dts --format cjs,esm --legacy-output",
+        "deploy": "markdown-inject './README.md' && node dist/index.js"
     },
     "author": "",
     "license": "MIT",
