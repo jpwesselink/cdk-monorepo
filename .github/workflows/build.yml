@@ -52,7 +52,7 @@ jobs:
       #     NPM_AUTH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
 
       - name: build
-        run: yarn build
+        run: yarn lerna run build
         env:
           CI: true
 
@@ -79,15 +79,15 @@ jobs:
           # NPM_AUTH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
 
       - name: build
-        run: yarn lerna build
+        run: yarn lerna run build
         env:
           CI: true
           # NPM_AUTH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
 
-      # - name: setup github name/email
-      #   run: |
-      #     git config --local user.email "$(git log --format='%ae' HEAD^!)"
-      #     git config --local user.name "$(git log --format='%an' HEAD^!)"
+      - name: setup github name/email
+        run: |
+          git config --local user.email "$(git log --format='%ae' HEAD^!)"
+          git config --local user.name "$(git log --format='%an' HEAD^!)"
 
       # Beta release only when opening a PR to develop
       # - name: release-beta
