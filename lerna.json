@@ -6,14 +6,12 @@
   "npmClient": "yarn",
   "version": "independent",
   "command": {
-    "publish": {
+    "version": {
       "ignoreChanges": ["*.md"],
       "allowBranch": ["main", "feature/*"],
       "conventionalCommits": true,
-      "gitRemote": "origin",
       "yes": true,
-      "message": "chore: versioning",
-      "registry": "https://npm.pkg.github.com"
+      "message": "chore: versioning"
     }
   }
 }
