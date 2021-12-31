@@ -55,35 +55,6 @@ jobs:
         run: yarn lerna run build
         env:
           CI: true
-
-  version:
-    needs: test-build
-    name: version
-    runs-on: ubuntu-latest
-    if: "!contains(github.event.head_commit.message, 'skip ci') && !contains(github.event.head_commit.message, 'chore(deps-dev):')"
-    steps:
-      - uses: actions/checkout@v2
-
-      - name: Use Node.js 14.X
-        uses: actions/setup-node@v1
-        with:
-          node-version: 14.x
-
-      - name: Install Yarn
-        run: npm install -g yarn@1.22.10
-
-      - name: install
-        run: yarn install --frozen-lockfile
-        env:
-          CI: true
-          # NPM_AUTH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-
-      - name: build
-        run: yarn lerna run build
-        env:
-          CI: true
-          # NPM_AUTH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-
       - name: setup github name/email
         run: |
           git config --local user.email "$(git log --format='%ae' HEAD^!)"
@@ -100,7 +71,54 @@ jobs:
       # Release stable package version
       - name: version
         if: ${{ github.ref == 'refs/heads/main' }}
-        run: yarn lerna version --conventional-commits --changelog-preset conventionalcommits
+        run: yarn lerna version --conventional-commits
         env:
           CI: true
-          # NPM_AUTH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+  # version:
+  #   needs: test-build
+  #   name: version
+  #   runs-on: ubuntu-latest
+  #   if: "!contains(github.event.head_commit.message, 'skip ci') && !contains(github.event.head_commit.message, 'chore(deps-dev):')"
+  #   steps:
+  #     - uses: actions/checkout@v2
+
+  #     - name: Use Node.js 14.X
+  #       uses: actions/setup-node@v1
+  #       with:
+  #         node-version: 14.x
+
+  #     - name: Install Yarn
+  #       run: npm install -g yarn@1.22.10
+
+  #     - name: install
+  #       run: yarn install --frozen-lockfile
+  #       env:
+  #         CI: true
+  #         # NPM_AUTH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+
+  #     - name: build
+  #       run: yarn lerna run build
+  #       env:
+  #         CI: true
+  #         # NPM_AUTH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+
+  #     - name: setup github name/email
+  #       run: |
+  #         git config --local user.email "$(git log --format='%ae' HEAD^!)"
+  #         git config --local user.name "$(git log --format='%an' HEAD^!)"
+
+  #     # Beta release only when opening a PR to develop
+  #     # - name: release-beta
+  #     #   if: ${{ github.event_name == 'pull_request' && github.base_ref == 'master' }}
+  #     #   run: yarn release:beta
+  #     #   env:
+  #     #     CI: true
+  #     #     NPM_AUTH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+
+  #     # Release stable package version
+  #     - name: version
+  #       if: ${{ github.ref == 'refs/heads/main' }}
+  #       run: yarn lerna version --conventional-commits
+  #       env:
+  #         CI: true
+  #         # NPM_AUTH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
