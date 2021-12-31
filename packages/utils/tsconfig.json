@@ -1,0 +1,7 @@
+{
+  "compilerOptions": {
+    "incremental": false
+  },
+  "extends": "../../tsconfig.json",
+  "include": ["**/*.ts", "tsup.config.ts"]
+}

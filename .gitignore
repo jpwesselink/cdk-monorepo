@@ -1,0 +1,17 @@
+.idea/
+node_modules/
+lerna-debug.log
+npm-debug.log
+packages/*/dist
+packages/*/lib
+coverage
+.vscode/
+packages/*/.npmrc
+.DS_Store
+
+# artifacts
+*.zip
+*.tar.gz
+yarn-error.log
+tsconfig.tsbuildinfo
+.env
