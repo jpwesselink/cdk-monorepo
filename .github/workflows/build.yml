@@ -100,7 +100,7 @@ jobs:
       # Release stable package version
       - name: version
         if: ${{ github.ref == 'refs/heads/main' }}
-        run: yarn version --conventional-commits
+        run: yarn lerna version --conventional-commits --changelog-preset conventionalcommits
         env:
           CI: true
           # NPM_AUTH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
