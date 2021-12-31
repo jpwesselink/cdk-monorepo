@@ -4,7 +4,9 @@ export const docsConfig = {
   commonConfig: config,
 };
 
-console.log("---------------------------------------------------------------");
+console.log(
+  "---------------------------------------------------------------------"
+);
 docsConfig.commonConfig.quotes.map((quote) => {
   console.log("Quotes");
   console.log("");
@@ -19,4 +21,6 @@ docsConfig.commonConfig.quotes.map((quote) => {
   });
 });
 
-console.log("---------------------------------------------------------------");
+console.log(
+  "---------------------------------------------------------------------"
+);
