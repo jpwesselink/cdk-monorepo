@@ -4,5 +4,16 @@
     "packages/*"
   ],
   "npmClient": "yarn",
-  "version": "independent"
+  "version": "independent",
+  "command": {
+    "publish": {
+      "ignoreChanges": ["*.md"],
+      "allowBranch": ["main", "feature/*"],
+      "conventionalCommits": true,
+      "gitRemote": "origin",
+      "yes": true,
+      "message": "chore(release): publish",
+      "registry": "https://npm.pkg.github.com"
+    }
+  }
 }
