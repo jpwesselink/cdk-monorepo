@@ -12,6 +12,7 @@
       "conventionalCommits": true,
       "gitRemote": "origin",
       "yes": true,
+      "message": "chore: version",
       "registry": "https://npm.pkg.github.com"
     }
   }
