@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [1.3.2](https://github.com/jpwesselink/cdk-monorepo/compare/@ephemeral/docs@1.3.1...@ephemeral/docs@1.3.2) (2022-01-03)
+
+
+### Bug Fixes
+
+* **docs:** something small ([97cb657](https://github.com/jpwesselink/cdk-monorepo/commit/97cb65794bee845b3b01db8994caecbe8e64237f))
+
+
+
+
+
 ## [1.3.1](https://github.com/jpwesselink/cdk-monorepo/compare/@ephemeral/docs@1.3.0...@ephemeral/docs@1.3.1) (2022-01-03)
 
 **Note:** Version bump only for package @ephemeral/docs
