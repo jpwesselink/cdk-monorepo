@@ -20,6 +20,9 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v2
+        with:
+          fetch-depth: "0"
+      - run: git fetch --depth=1 origin +refs/tags/*:refs/tags/*
 
       - name: Use Node.js 14.X
         uses: actions/setup-node@v1
@@ -33,23 +36,6 @@ jobs:
         run: yarn install --frozen-lockfile
         env:
           CI: true
-
-      # - name: lint
-      #   run: yarn lint
-      #   env:
-      #     CI: true
-      # - name: test
-      #   run: yarn test
-      #   env:
-      #     CI: true
-
-      # - name: test Upper East api integrity
-      #   run: cd packages/upper-east-client && yarn test:api-integrity || true
-      #   env:
-      #     CI: true
-      #     UPPER_EAST_API_HOST: ${{ secrets.UPPER_EAST_API_HOST }}
-      #     UPPER_EAST_API_KEY: ${{ secrets.UPPER_EAST_API_KEY }}
-      #     NPM_AUTH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
 
       - name: build
         run: yarn lerna run build
