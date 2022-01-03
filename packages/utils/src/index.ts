@@ -28,3 +28,5 @@ export type Config = {
         }[];
     }[];
 }
+
+export type Configs = Config[];
