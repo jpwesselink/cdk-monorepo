@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [1.3.0](https://github.com/jpwesselink/cdk-monorepo/compare/@ephemeral/docs@1.2.4...@ephemeral/docs@1.3.0) (2022-01-03)
+
+
+### Features
+
+* **docs:** beautiful markup ([0ffed19](https://github.com/jpwesselink/cdk-monorepo/commit/0ffed19834a7f7957fde8ff8e3cb8501fa1433c7))
+
+
+
+
+
 ## 1.2.4 (2021-12-31)
 
 **Note:** Version bump only for package @ephemeral/docs
