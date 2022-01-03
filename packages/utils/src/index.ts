@@ -1,4 +1,4 @@
-export const config = {
+export const config: Config = {
   quotes: [
     {
       author: { firstName: "Carl", lastName: "Sagan" },
@@ -14,3 +14,17 @@ export const config = {
     },
   ],
 };
+
+export type Config = {
+    quotes: {
+        author: {
+            firstName: string;
+            lastName: string;
+        };
+        works: {
+            type: string;
+            title: string;
+            texts: string[];
+        }[];
+    }[];
+}
