@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# 1.1.0 (2022-01-03)
+
+
+### Features
+
+* **utils:** exporting config type ([3b57be6](https://github.com/jpwesselink/cdk-monorepo/commit/3b57be613732408baaacef4e8f4e1c80ed4dbe4f))
+
+
+
+
+
 ## 1.0.7 (2021-12-31)
 
 **Note:** Version bump only for package @ephemeral/utils
