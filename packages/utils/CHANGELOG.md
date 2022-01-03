@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# 1.2.0 (2022-01-03)
+
+
+### Features
+
+* **utils:** support for multiple configs ([331fae6](https://github.com/jpwesselink/cdk-monorepo/commit/331fae6eacf6eba2d9a8fb304050a9abee267aa9))
+
+
+
+
+
 # 1.1.0 (2022-01-03)
 
 
