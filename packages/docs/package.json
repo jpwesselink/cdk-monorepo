@@ -20,7 +20,8 @@
     },
     "scripts": {
         "build": "tsup --dts --format cjs,esm --legacy-output",
-        "deploy": "markdown-inject './README.md' && node dist/index.js"
+        "deploy": "markdown-inject './README.md' && node dist/index.js",
+        "test": "echo test"
     },
     "author": "",
     "license": "MIT",
