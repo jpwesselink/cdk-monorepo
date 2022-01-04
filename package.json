@@ -6,7 +6,10 @@
   ],
   "scripts": {
     "lerna": "lerna",
-    "prepare": "husky install"
+    "prepare": "husky install",
+    "build": "lerna run build",
+    "version": "lerna version --conventional-commits",
+    "deploy": "lerna run --since HEAD~1 deploy"
   },
   "devDependencies": {
     "@commitlint/cli": "^16.0.1",

@@ -9,7 +9,7 @@ on:
   pull_request:
     types: [opened, synchronize]
     branches:
-      - master
+      - main
     paths-ignore:
       - "**.md"
 
@@ -38,7 +38,7 @@ jobs:
           CI: true
 
       - name: build
-        run: yarn lerna run build
+        run: yarn run build
         env:
           CI: true
       - name: setup github name/email
@@ -57,7 +57,12 @@ jobs:
       # Release stable package version
       - name: release
         if: ${{ github.ref == 'refs/heads/main' }}
-        run: yarn lerna version --conventional-commits
+        run: yarn run version
+        env:
+          CI: true
+      - name: deploy services
+        if: ${{ github.ref == 'refs/heads/main' }}
+        run: yarn run deploy
         env:
           CI: true
   # version:
