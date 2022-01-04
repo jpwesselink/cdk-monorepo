@@ -22,7 +22,8 @@
     "license": "MIT",
     "scripts": {
         "dev": "tsup --watch ./src --onSuccess \"node dist/main.js\"",
-        "build": "tsup --dts --format cjs,esm --legacy-output"
+        "build": "tsup --dts --format cjs,esm --legacy-output",
+        "test": "echo test"
     },
     "devDependencies": {
         "@types/node": "^14.14.19",
