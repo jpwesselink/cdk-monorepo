@@ -8,7 +8,7 @@
     "lerna": "lerna",
     "prepare": "husky install",
     "build": "lerna run build",
-    "version": "lerna version --conventional-commits",
+    "version": "lerna version",
     "deploy": "lerna run --since HEAD~1 deploy"
   },
   "devDependencies": {
