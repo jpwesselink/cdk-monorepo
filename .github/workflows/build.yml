@@ -42,7 +42,13 @@ jobs:
         env:
           CI: true
       - name: test
+        if: ${{ github.ref == 'refs/heads/main' }}
         run: yarn run test
+        env:
+          CI: true
+      - name: test changed
+        if: ${{ github.event_name == 'pull_request' && github.base_ref == 'main' }}
+        run: yarn run test-packages
         env:
           CI: true
       - name: setup github name/email
