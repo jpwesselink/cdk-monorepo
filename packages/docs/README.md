@@ -12,7 +12,7 @@ import { config } from "@ephemeral/utils";
 var docsConfig = {
   commonConfig: config
 };
-console.log("---------------------------------------------------------------");
+console.log("x ---------------------------------------------------------------------");
 docsConfig.commonConfig.quotes.map((quote) => {
   var _a;
   console.log("Quotes");
@@ -28,7 +28,7 @@ docsConfig.commonConfig.quotes.map((quote) => {
     });
   });
 });
-console.log("---------------------------------------------------------------");
+console.log("x ---------------------------------------------------------------------");
 export {
   docsConfig
 };
