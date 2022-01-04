@@ -1,0 +1,36 @@
+{
+    "name": "@ephemeral/second-docs",
+    "private": true,
+    "version": "1.0.0",
+    "description": "",
+    "main": "./dist/index.js",
+    "types": "./dist/index.d.ts",
+    "module": "./dist/esm/index.js",
+    "files": [
+        "README.md",
+        "LICENSE.md",
+        "package.json",
+        "dist"
+    ],
+    "exports": {
+        ".": {
+            "import": "./dist/esm/index.js",
+            "require": "./dist/index.js"
+        }
+    },
+    "scripts": {
+        "build": "tsup --dts --format cjs,esm --legacy-output",
+        "deploy": "markdown-inject './README.md' && node dist/index.js"
+    },
+    "author": "",
+    "license": "MIT",
+    "dependencies": {
+        "@ephemeral/utils": "^1.2.0"
+    },
+    "devDependencies": {
+        "@types/node": "^14.14.19",
+        "markdown-inject": "^2.0.0",
+        "tsup": "^4.14.0",
+        "typescript": "~4.4.4"
+    }
+}
