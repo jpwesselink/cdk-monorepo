@@ -9,7 +9,7 @@
     "prepare": "husky install",
     "build": "lerna run build",
     "test": "lerna run test",
-    "test-changed": "lerna run test --since main",
+    "test-changed": "lerna run test --since",
     "version": "lerna version",
     "pre-release": "lerna publish --no-verify-access --canary --preid beta.$(git rev-parse --short HEAD)",
     "deploy": "lerna run --since HEAD~1 deploy"
